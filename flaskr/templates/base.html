@@ -1,0 +1,22 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Braxton Brent</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  <h1><a href = http://127.0.0.1:5000/ > Braxton Brent </a></h1>
+  <ul>
+
+      <li><a href="http://127.0.0.1:5000/about">Resume</a> 
+      <li><a href="http://127.0.0.1:5000/predictions">PLL Game Predictor</a> 
+      <li><a href="http://127.0.0.1:5000/work">Other Work</a>   
+
+  </ul>
+</nav>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>

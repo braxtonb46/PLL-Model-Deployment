@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Predictions{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="row justify-content-md-center mb-4">
+        <h3 class='text-primary'> The {{ team }}  {{ prediction }} the {{opponent}} in week {{week}} </h3>
+      
+        <a href="http://127.0.0.1:5000/predictions"> Try Again </a>
+    </div>
+
+
+{% endblock %}

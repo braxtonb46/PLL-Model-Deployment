@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}PLL Game Predictor{% endblock %}</h1>
+{% endblock %}
+
+
+{% block content %}
+<div>
+<center>
+Type in the name of a PLL team and the number of the week you would like to predict their result for.<br>
+Please capitalize the first letter of the team name and only select weeks 2-11. <br>
+Finally, week 6 was a bye week, so no predictions will be available. <br>
+Enjoy!<br>
+</center>
+</div>
+
+<center><div class="form-container ">
+    <form class = 'form-horizontal' action = '/predict' method = 'post'>
+
+        <div class="form-group row">
+          <label class="control-label col-sm-2" for="team">Team:</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="team" name="team">
+          </div>
+        </div>
+    
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="week">Week:</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="week" name="week">
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="">&nbsp;</label>
+              <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">Predict</button>
+              </div>
+        </div>
+    
+    
+    
+    
+    
+    </form>
+    <b>Team Names: Archers, Chaos, Waterdogs, Whipsnakes, Redwoods, Chrome, Cannons, Atlas</b>
+</div></center>
+
+{% endblock %}
